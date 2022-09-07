@@ -4,18 +4,19 @@
   "description": "TBD.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cypress run",
+    "cy:open":"cypress open",
     "lint": "eslint cypress/**/*.js",
     "lint:fix": "eslint cypress/**/*.js --fix"
   },
-  "keywords": [],
+  "keywords": ["cypress.io","cypress testing","cypress-mailsaur","cy.handsOn"],
   "author": "Francisco Daniel",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^8.2.0",
     "cypress-mailosaur": "^2.3.3",
     "eslint": "^8.23.0",
-    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-cypress": "^2.11.3",
     "faker": "^5.5.3"
   }
 }

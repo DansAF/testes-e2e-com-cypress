@@ -5,15 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "cy:open":"cypress open",
+    "cy:open": "cypress open",
     "lint": "eslint cypress/**/*.js",
     "lint:fix": "eslint cypress/**/*.js --fix"
   },
-  "keywords": ["cypress.io","cypress testing","cypress-mailsaur","cy.handsOn"],
+  "keywords": [
+    "cypress.io",
+    "cypress testing",
+    "cypress-mailsaur",
+    "cy.handsOn"
+  ],
   "author": "Francisco Daniel",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^8.2.0",
+    "cypress-iframe": "^1.0.1",
     "cypress-mailosaur": "^2.3.3",
     "eslint": "^8.23.0",
     "eslint-plugin-cypress": "^2.11.3",

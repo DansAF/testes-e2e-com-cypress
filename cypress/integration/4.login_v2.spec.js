@@ -2,7 +2,7 @@
 
 it('Teste no Login', () => {
 
-    cy.intercept('GET', '**/notes').as('getNotes')
-    cy.loginUser()
-    cy.wait('@getNotes')
-  })
+  cy.intercept('GET', '**/notes').as('getNotes')
+  cy.loginUser()
+  cy.wait('@getNotes')
+})

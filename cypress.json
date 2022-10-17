@@ -4,5 +4,11 @@
     "experimentalSessionSupport": true,
     "chromeWebSecurity": false,
     "fixteuresFolder": false,
-    "pluginsFile": false
+    "pluginsFile": false,
+    "experimentalStudio": true,
+    "env": {
+        "viewportWidthBreakpoint": 768
+      }
+
+
 }

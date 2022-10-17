@@ -4,11 +4,13 @@
   "description": "TBD.",
   "main": "index.js",
   "scripts": {
-    "teste": "npx cypress run --record --key 66b8fb43-32da-48c7-8436-5e9f5f419a54",
     "cy:open": "cypress open",
+    "cy:open:tablet": "cypress open --config viewportWidth=767,viewportHeight=480",
+    "test": "cypress run",
+    "test:tablet": "cypress run --config viewportWidth=767,viewportHeight=480 --spec cypress/integration/authenticatedScenarios.spec.js",
     "lint": "eslint cypress/**/*.js",
-    "lint:fix": "eslint cypress/**/*.js --fix"
-  },
+    "lint:fix": "eslint cypress/**/*.js --fix" },
+ 
   "keywords": [
     "cypress.io",
     "cypress testing",
@@ -19,6 +21,7 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^8.2.0",
+    "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1",
     "cypress-mailosaur": "^2.3.3",
     "eslint": "^8.23.0",

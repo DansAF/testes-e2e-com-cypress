@@ -6,7 +6,7 @@ it('CRUDs a note', () => {
   cy.intercept('GET', '**/notes').as('getNotes')
   cy.loginUser()
   cy.wait('@getNotes')
-  
+
   cy.createNote(noteDescription)
   cy.wait('@getNotes')
 

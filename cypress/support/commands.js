@@ -24,9 +24,9 @@ Cypress.Commands.add('loginUser', (
   cy.get('#email').type(username, { log: false })
   cy.get('#password').type(userpassword, { log: false })
   cy.contains('button', 'Login').click()
-  cy.wait('@getNote')
-  cy.contains('h1', 'Your Notes').should('be.visible')
 
+  cy.contains('h1', 'Your Notes').should('be.visible')
+  cy.wait('@getNote')
 })
 
 /*
@@ -60,8 +60,8 @@ Cypress.Commands.add('loginGui', (
     cy.get('#email').type(username)
     cy.get('#password').type(userpassword, { log: false })
     cy.contains('button', 'Login').click()
-    cy.wait('@getNote')
     cy.contains('h1', 'Your Notes').should('be.visible')
+    cy.wait('@getNote')
   }
 
   if (cacheSession) {

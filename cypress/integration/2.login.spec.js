@@ -1,7 +1,7 @@
 // cypress/integration/signup.spec.js
 
 it('Teste no Login', () => {
-  // const faker = require('faker')
+  const faker = require('faker')
   const emailAddress = Cypress.env('login_MAIL')
   const password = Cypress.env('login_PASSWORD')
   const texto = faker.lorem.words(2)

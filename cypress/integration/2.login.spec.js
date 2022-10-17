@@ -4,7 +4,7 @@ it('Teste no Login', () => {
   const faker = require('faker')
   const emailAddress = Cypress.env('login_MAIL')
   const password = Cypress.env('login_PASSWORD')
-  const texto = faker.lorem.words(2)
+  const texto = faker.lorem.words(38)
   // const texto2 = faker.lorem.words(78)
 
   cy.intercept('GET', '**/notes').as('getNotes')

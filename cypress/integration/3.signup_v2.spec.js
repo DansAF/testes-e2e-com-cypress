@@ -4,8 +4,7 @@ it('Processo de signup com verigficaçãod e código', () => {
   const faker = require('faker')
   const emailAddress = `${faker.datatype.uuid()}@${Cypress.env('MAILOSAUR_SERVER_ID')}.mailosaur.net`
   const password = Cypress.env('USER_PASSWORD')
-  const texto = Cypress.env('text-teste')
-  // const texto2 = Cypress.env('text-teste2')
+  const texto = faker.lorem.words(15)
 
   cy.intercept('GET', '**/notes').as('getNotes')
   cy.fillSignupFormAndSubmit(emailAddress, password)

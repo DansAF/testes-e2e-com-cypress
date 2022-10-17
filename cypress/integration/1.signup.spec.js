@@ -21,32 +21,25 @@ it('Processo de signup com verigficaçãod e código', () => {
     const confirmationCode = message.html.body.match(/\d{6}/)[0]
     cy.get('#confirmationCode').type(`${confirmationCode}{enter}`)
 
-    cy.wait(5000)
     cy.wait('@getNotes')
     cy.contains('h1', 'Your Notes').should('be.visible')
-    cy.wait(3000)
 
     cy.contains('Create a new note').click()
-    cy.wait(1000)
     cy.get('#content').type(texto)
 
 
     cy.contains('button', 'Create').click()
 
-    cy.wait(3000)
 
     cy.contains('Create a new note').click()
-    cy.wait(1000)
     cy.get('#content').type(texto2)
 
 
     cy.contains('button', 'Create').click()
-    cy.wait(5000)
 
 
     cy.wait('@getNotes')
     cy.contains('h1', 'Your Notes').should('be.visible')
-    cy.wait(10000)
 
     cy.contains('a', 'Logout').click()
 

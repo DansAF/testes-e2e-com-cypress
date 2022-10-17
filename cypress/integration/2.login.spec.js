@@ -1,7 +1,7 @@
 // cypress/integration/signup.spec.js
 
 it('Teste no Login', () => {
-  const faker = require('faker')
+  // const faker = require('faker')
   const emailAddress = Cypress.env('login_MAIL')
   const password = Cypress.env('login_PASSWORD')
   const texto = Cypress.env('text-teste3')
@@ -14,29 +14,22 @@ it('Teste no Login', () => {
   //cy.get('#confirmPassword').type(password, { log: false })
   cy.contains('button', 'Login').click()
 
-  cy.wait(5000)
   cy.wait('@getNotes')
   cy.contains('h1', 'Your Notes').should('be.visible')
-  cy.wait(3000)
 
   cy.contains('Create a new note').click()
-  cy.wait(1000)
 
   cy.get('#content').type(texto)
   cy.contains('button', 'Create').click()
-  cy.wait(3000)
 
   cy.contains('Create a new note').click()
-  cy.wait(1000)
 
   cy.get('#content').type(`${texto}{enter}`)
   cy.contains('button', 'Create').click()
-  cy.wait(5000)
 
 
   cy.wait('@getNotes')
   cy.contains('h1', 'Your Notes').should('be.visible')
-  cy.wait(10000)
 
   //cy.contains('a', 'Logout').click()
 

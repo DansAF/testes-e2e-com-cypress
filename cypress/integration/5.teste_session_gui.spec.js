@@ -14,7 +14,6 @@ it('fazer login', () => {
 
 
   cy.loginGui()
-  cy.wait(3000)
 
 })
 
@@ -110,7 +109,6 @@ it('Inserir Cartão Créd.', (  ) => {
     .type('12345')
 
   cy.contains('button', 'Purchase').click()
-  cy.wait(1000)
 
   cy.wait('@paymentRequest') .then(response => {
     expect(response.state).to.equal('Complete')
@@ -124,7 +122,6 @@ it('Logout', () => {
 
 
   cy.visit('/')
-  cy.wait(500)
 
   cy.contains('.navbar-right [href="#"]', 'Logout').click()
 
